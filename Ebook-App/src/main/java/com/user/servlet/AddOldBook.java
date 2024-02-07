@@ -1,4 +1,4 @@
-package com.admin.servlet;
+package com.user.servlet;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,11 +16,11 @@ import com.DAO.BookDAOImpl;
 import com.DB.DBConnect;
 import com.entity.Book_Dtls;
 
-
-@WebServlet("/add_books")
+@WebServlet("/add_old_book")
 @MultipartConfig
-public class BookAdd extends HttpServlet{
-
+public class AddOldBook extends HttpServlet{
+	
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
@@ -29,13 +29,15 @@ public class BookAdd extends HttpServlet{
 			String bookName=req.getParameter("bname");
 			String author=req.getParameter("author");
 			Double price=Double.parseDouble(req.getParameter("price"));
-			String categories=req.getParameter("categories");
-			String status=req.getParameter("status");
+			String categories="Old";
+			String status="Active";
 			Part part=req.getPart("bimg");
 			String fileName=part.getSubmittedFileName();
 			
+			String useremail=req.getParameter("user");
 			
-			Book_Dtls b = new Book_Dtls(0,bookName, author, price, categories, status, fileName, "admin");
+			
+			Book_Dtls b = new Book_Dtls(0,bookName, author, price, categories, status, fileName, useremail);
 			
 			BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
 			
@@ -56,10 +58,10 @@ public class BookAdd extends HttpServlet{
 				
 				
 				session.setAttribute("succMsg","Book Add Successfully");
-				resp.sendRedirect("admin/all_books.jsp");
+				resp.sendRedirect("sell_book.jsp");
 			}else {
 				session.setAttribute("failedMsg","Something wrong on Server");
-				resp.sendRedirect("admin/add_books.jsp");
+				resp.sendRedirect("sell_book.jsp");
 			}
 			
 			
@@ -68,6 +70,4 @@ public class BookAdd extends HttpServlet{
 		}
 		
 	}
-	
-	
 }

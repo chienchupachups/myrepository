@@ -345,6 +345,100 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 	
+	@Override
+	public List<Book_Dtls> getBookByOld(String email, String cate) {
+		List<Book_Dtls> list = new ArrayList<Book_Dtls>();
+		Book_Dtls b=null;
+		
+		try {
+			String sql = "select * from book_dtls where bookCategory=? and email=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, cate);
+			ps.setString(2, email);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while (rs.next())
+			{
+				b = new Book_Dtls();
+				
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getDouble(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				
+				list.add(b);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
 	
+	@Override
+	public boolean oldBookDelete(String email, String cate,int id) {
+		boolean f=false;
+
+		try {
+			String sql="delete from book_dtls where bookCategory=? and email=? and bookId=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, cate);
+			ps.setString(2, email);
+			ps.setInt(3, id);
+			
+			int i = ps.executeUpdate();
+			if (i == 1) {
+				f = true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return f;
+	}
+	
+	@Override
+	public List<Book_Dtls> getBookBySearch(String ch) {
+		List<Book_Dtls> list = new ArrayList<Book_Dtls>();
+		Book_Dtls b=null;
+		
+		try {
+			String sql = "select * from book_dtls where bookname like ? or author like ? or bookCategory like ? and status=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, "%"+ch+"%");
+			ps.setString(2, "%"+ch+"%");
+			ps.setString(3, "%"+ch+"%");
+			ps.setString(4, "Active");
+			ResultSet rs = ps.executeQuery();
+			
+			while (rs.next())
+			{
+				b = new Book_Dtls();
+				
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getDouble(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				
+				list.add(b);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
 
 }

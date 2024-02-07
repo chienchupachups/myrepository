@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Setting Page</title>
 <%@include file="all_component/allCss.jsp"%>
 <style type="text/css">
 a {
@@ -17,34 +19,58 @@ a:hover {
 }
 </style>
 </head>
-<body>
+<body style="background-color: #f7f7f7;">
+
+	<c:if test="${empty userobj }">
+		<c:redirect url="login.jsp"/>
+	
+	
+	</c:if>
+
+
 	<%@include file="all_component/navbar.jsp"%>
 
 
 	<div class="container p-2">
-		<h3 class="text-center">Hello, Chien Doan</h3>
+
+		
+		<h3 class="text-center">Hello, ${userobj.name }</h3>
+
 		<div class="row p-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<a href="sell_book.jsp">
 					<div class="card">
 						<div class="card-body text-center">
 							<div class="text-primary">
 								<i class="fa-solid fa-book-open fa-3x"></i>
 							</div>
-							<h3>Sell Old Book</h3>
+							<h4>Sell Old Book</h4>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="old_book.jsp">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="text-primary">
+								<i class="fa-solid fa-book-open fa-3x"></i>
+							</div>
+							<h4>Old Book</h4>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<a href="edit_profile.jsp">
 					<div class="card">
 						<div class="card-body text-center">
 							<div class="text-primary">
 								<i class="fa-solid fa-pen-to-square fa-3x"></i>
 							</div>
-							<h3>Login & Security (Edit Profile)</h3>
+							<h4>Edit Profile</h4>
 						</div>
 					</div>
 				</a>
@@ -67,7 +93,7 @@ a:hover {
 
 
 			<div class="col-md-4 mt-3">
-				<a href="#">
+				<a href="user_order.jsp">
 					<div class="card">
 						<div class="card-body text-center">
 							<div class="text-warning">

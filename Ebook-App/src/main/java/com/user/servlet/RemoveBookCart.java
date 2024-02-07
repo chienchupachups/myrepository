@@ -19,18 +19,19 @@ public class RemoveBookCart extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int bid = Integer.parseInt(req.getParameter("bid"));
 		int uid = Integer.parseInt(req.getParameter("uid"));
+		int cid = Integer.parseInt(req.getParameter("cid"));
 		CartDAOImpl dao = new CartDAOImpl(DBConnect.getConn());
-		boolean f = dao.removeBook(bid,uid);
+		boolean f = dao.removeBook(bid,uid,cid);
 		
 		HttpSession session = req.getSession();
 		
 		if(f)
 		{
 			session.setAttribute("succMsg", "Book Removed from Cart");
-			resp.sendRedirect("Checkout.jsp");
+			resp.sendRedirect("checkout.jsp");
 		} else {
 			session.setAttribute("failed", "something wrong on server");
-			resp.sendRedirect("Checkout.jsp");
+			resp.sendRedirect("checkout.jsp");
 		}
 	}
 	

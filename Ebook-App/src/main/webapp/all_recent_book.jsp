@@ -1,3 +1,4 @@
+<%@page import="com.entity.User"%>
 <%@page import="com.DB.DBConnect"%>
 <%@page import="java.util.List"%>
 <%@page import="com.DAO.BookDAOImpl"%>
@@ -28,6 +29,32 @@
 <body>
 	<%@include file="all_component/navbar.jsp"%>
 
+	<%
+	User user = (User) session.getAttribute("userobj");
+	%>
+
+	<c:if test="${not empty addCart}">
+
+		<div id="toast">${addCart}</div>
+
+		<script type="text/javascript">
+
+
+showToast();
+function showToast(content){
+	$('#toast').addClass("display");
+	$('#toast').html(content);
+	setTimeout(()=>{
+		$("#toast").removeClass("display");
+	},2000)
+}
+
+
+</script>
+		<c:remove var="addCart" scope="session"></c:remove>
+
+	</c:if>
+
 	<div class="container">
 		<div class="row p-3">
 			<%
@@ -49,17 +76,36 @@
 
 							Category:<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="view_books.jsp" class="btn btn-success btn-sm ml-1">View Details</a> <a
-								href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
+								class="btn btn-success btn-sm ml-5">View Details</a> <a href=""
+								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 						<%
 						} else {
 						%>
 						Category:<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="" class="btn btn-danger btn-sm ml-1 ">Add Cart</a> 
-								<a href="view_books.jsp" class="btn btn-success btn-sm ml-1">View Details</a>
-								<a href=""class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+						
+						<%
+							if (user == null) {
+							%>
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-2">Add
+								Cart</a>
+							
+							<%
+							} else {
+							%>
+							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=user.getId()%>"
+								class="btn btn-danger btn-sm ml-2">Add Cart</a>
+								
+							<%
+							}
+							%>
+						
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
+								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
+								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+
 						</div>
 						<%
 						}
@@ -70,10 +116,9 @@
 			<%
 			}
 			%>
+
 		</div>
 	</div>
-
-<%@include file="all_component/footer.jsp"%>
-
+	<%@include file="all_component/footer.jsp"%>
 </body>
 </html>

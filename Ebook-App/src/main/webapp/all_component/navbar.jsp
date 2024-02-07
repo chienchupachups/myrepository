@@ -13,8 +13,8 @@
 				</h3>
 			</div>
 			<div class="col-md-6">
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search"
+				<form class="form-inline my-2 my-lg-0" action="search.jsp" method="post">
+					<input class="form-control mr-sm-2" type="search" name="ch"
 						placeholder="Search" aria-label="Search">
 					<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 				</form>
@@ -24,7 +24,7 @@
 			
 			<div class="col-md-3">
 			
-			<a href="Checkout.jsp" class="m-3"> <i class="fa-solid fa-cart-plus fa-2x"></i></a>
+			<a href="checkout.jsp" class="m-3"> <i class="fa-solid fa-cart-plus fa-2x"></i></a>
 			
 				<a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> ${userobj.name }</a>
 					 <a href="logout" 

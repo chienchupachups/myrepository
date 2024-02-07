@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page isELIgnored="false" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +10,12 @@
 <title>Admin: Add Books</title>
 <%@include file="allCss.jsp"%>
 </head>
-<body>
+<body style="background-color: #f0f2f2;">
 	<%@include file="navbar.jsp"%>
+	
+
+	
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
