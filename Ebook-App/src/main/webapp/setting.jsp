@@ -78,7 +78,7 @@ a:hover {
 
 
 			<div class="col-md-4 mt-3">
-				<a href="#">
+				<a href="user_address.jsp">
 					<div class="card">
 						<div class="card-body text-center">
 							<div class="text-danger">

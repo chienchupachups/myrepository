@@ -83,28 +83,25 @@
 							%>
 							<a href="login.jsp" class="btn btn-danger btn-sm ml-2">Add
 								Cart</a>
-							
+
 							<%
 							} else {
 							%>
 							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=user.getId()%>"
 								class="btn btn-danger btn-sm ml-2">Add Cart</a>
-								
+
 							<%
 							}
 							%>
-								<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-								class="btn btn-success btn-sm ml-1">View Details</a>
-								
-	
-							 <a href=""
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
+								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 						<%
 						}
 						%>
-						
-						
+
+
 					</div>
 				</div>
 			</div>
@@ -229,7 +226,8 @@
 
 		</div>
 		<div class="text-center mt-2">
-			<a href="all_old_book.jsp" class="btn btn-danger btn-sm text-white">View All</a>
+			<a href="all_old_book.jsp" class="btn btn-danger btn-sm text-white">View
+				All</a>
 		</div>
 	</div>
 	<!-- End Old Book -->
