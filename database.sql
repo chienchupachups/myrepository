@@ -1,0 +1,1 @@
+SELECT * FROM `ebook-app`.book_dtls;
