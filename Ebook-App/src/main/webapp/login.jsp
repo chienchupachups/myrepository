@@ -14,10 +14,10 @@
 	<%@include file="all_component/navbar.jsp"%>
 	<div class="container p-3">
 		<div class="row mt-2">
-			<div class="col-md-4 offset-md-4">
-				<div class="card">
+			<div class="col-lg-4 offset-lg-4">
+				<div class="card" style="margin-top: 10px;">
 					<div class="card-body">
-						<h3 class="text-center">Login Page</h3>
+						<h3 class="text-center">Login</h3>
 						
 						<c:if test="${not empty failedMsg }">
 						<h5 class="text-center text-danger">${failedMsg }</h5>
@@ -42,7 +42,7 @@
 							</div>
 
 							<div class="text-center">
-								<button type="submit" class="btn btn-primary">Login</button>
+								<button type="submit" class="btn" style="background: #77b748; color: white;">Login</button>
 								<div class="text-center">
 									<a href="register.jsp">Create Account</a>
 								</div>
@@ -54,8 +54,6 @@
 			</div>
 		</div>
 	</div>
-</body>
-<footer>
 	<%@include file="all_component/footer.jsp" %>
-</footer>
+</body>
 </html>

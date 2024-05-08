@@ -8,6 +8,10 @@
 	border-radius: 15px;
 }
 
+body > .container {
+	min-height: calc(100vh - 721px);
+}
+
 #toast {
 	min-width: 300px;
 	position: fixed;

@@ -25,8 +25,8 @@
 	<div class="container">
 		<div class="row p-5">
 			<div class="col-md-6 text-center p-5 border bg-white">
-				<img src="book/<%=b.getPhotoName()%>"
-					style="height: 25vh; width: 30%"><br>
+				<!-- <img src="book/<%=b.getPhotoName()%>""></img> -->
+				<img src="book/java.jpg"></img>
 				<h4>
 					Book Name:<span class="text-danger"><%=b.getBookname()%></span>
 				</h4>
@@ -89,6 +89,7 @@
 				%>
 				<%
 				User user = (User) session.getAttribute("userobj");
+				if ("Old".equals(b.getBookCategory())) {
 				%>
 				<div class="text-center p-3">
 					<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=user.getId()%>"
@@ -100,11 +101,15 @@
 				<%
 				}
 				%>
+				<%
+				}
+				%>
 
 
 
 			</div>
 		</div>
 	</div>
+	<%@include file="all_component/footer.jsp"%>
 </body>
 </html>

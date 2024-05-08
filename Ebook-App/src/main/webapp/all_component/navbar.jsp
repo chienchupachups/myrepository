@@ -1,85 +1,85 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
 
-<div class="container-fluid"
-	style="height: 10px; background-color: #303f9f">
-
-
-	<div class="container-fluid p-3">
-		<div class="row">
-			<div class="col-md-3 text-success">
-				<h3>
-					<i class="fa-solid fa-book"></i> Ebooks
-				</h3>
+<header id="tg-header" class="tg-header tg-haslayout">
+	<div class="tg-middlecontainer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<strong class="tg-logo"><a href="index.jsp"><img src="img/logo.png" alt="company name here"></a></strong>
+					
+					<c:if test="${not empty userobj }">
+						<div class="tg-wishlistandcart">
+							<div class="dropdown tg-themedropdown tg-wishlistdropdown">
+								<a href="#" id="tg-wishlisst" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="icon-heart"></i>
+									<span>${userobj.name}</span>
+								</a>
+							</div>
+							<div class="dropdown tg-themedropdown tg-minicartdropdown">
+								<a href="logout" id="tg-minicart" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="icon-cart"></i>
+									<span>Logout</span>
+								</a>
+							</div>
+						</div>
+					</c:if>
+					
+					<c:if test="${empty userobj }">
+						<div class="tg-wishlistandcart">
+							<div class="dropdown tg-themedropdown tg-wishlistdropdown">
+								<a href="login.jsp" id="tg-wishlisst" class="tg-btnthemedropdown">
+									<!-- <i class="icon-heart"></i> -->
+									<span>Login</span>
+								</a>
+							</div>
+							<div class="dropdown tg-themedropdown tg-minicartdropdown">
+								<a href="register.jsp" id="tg-minicart" class="tg-btnthemedropdown">
+									<!-- <i class="icon-cart"></i> -->
+									<span>Register</span>
+								</a>
+							</div>
+						</div>
+					</c:if>
+					
+					<div class="tg-searchbox">
+						<form class="tg-formtheme tg-formsearch" action="search.jsp" method="post">
+							<fieldset>
+								<input type="text" name="search" class="typeahead form-control" placeholder="Search by title, author, keyword, ISBN...">
+								<button type="submit"><i class="icon-magnifier" type="submit"></i></button>
+							</fieldset>
+						</form>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-6">
-				<form class="form-inline my-2 my-lg-0" action="search.jsp" method="post">
-					<input class="form-control mr-sm-2" type="search" name="ch"
-						placeholder="Search" aria-label="Search">
-					<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-				</form>
-			</div>
-
-			<c:if test="${not empty userobj }">
-			
-			<div class="col-md-3">
-			
-			<a href="checkout.jsp" class="m-3"> <i class="fa-solid fa-cart-plus fa-2x"></i></a>
-			
-				<a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> ${userobj.name }</a>
-					 <a href="logout" 
-					 class="btn btn-primary text-white"><i
-					class="fa-solid fa-right-to-bracket"></i> Logout</a>
-			</div>
-			
-			</c:if>
-
-			<c:if test="${empty userobj }">
-			
-			<div class="col-md-3">
-				<a href="login.jsp" class="btn btn-success"><i
-					class="fa-solid fa-right-to-bracket"></i> Login</a> <a
-					href="register.jsp" class="btn btn-primary text-white"><i
-					class="fa-solid fa-user-plus"></i> Register</a>
-			</div>
-			
-			</c:if>
-			
 		</div>
 	</div>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-		<a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="index.jsp">Home <span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item active"><a class="nav-link"
-					href="all_recent_book.jsp"><i class="fa-solid fa-book"></i>
-						Recent Book</a></li>
-				<li class="nav-item active"><a class="nav-link"
-					href="all_new_book.jsp"><i class="fa-solid fa-book"></i> New
-						Book</a></li>
-
-				<li class="nav-item active"><a class="nav-link"
-					href="all_old_book.jsp"><i class="fa-solid fa-book"></i> Old
-						Book</a></li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<a href="setting.jsp" class="btn btn-light my-2 my-sm-0" type="submit">
-					<i class="fa-solid fa-gear"></i> Setting
-				</a>
-				<button class="btn btn-light my-2 my-sm-0 ml-1" type="submit">
-					<i class="fa-solid fa-address-card"></i> Contact Us
-				</button>
-			</form>
+	<div class="tg-navigationarea">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<nav id="tg-nav" class="tg-nav">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigation" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
+							<ul>
+								<li><a href="index.jsp">Home</a></li>
+								<li><a href="all_recent_book.jsp">Recent Books</a></li>
+								<li><a href="all_new_book.jsp">New Books</a></li>
+								<li><a href="all_old_book.jsp">Old Books</a></li>
+								<li><a href="setting.jsp">Settings</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
 		</div>
-	</nav>
+	</div>
+</header>

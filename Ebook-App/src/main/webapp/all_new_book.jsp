@@ -97,7 +97,7 @@ function showToast(content){
 
 	<%@include file="all_component/navbar.jsp"%>
 
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row p-3">
 			<%
 			BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
@@ -141,13 +141,6 @@ function showToast(content){
 			%>
 		</div>
 	</div>
-
+	<%@include file="all_component/footer.jsp"%>
 </body>
-<footer>
-	<div class="container fluid text-center text-white p-2 mt-2"
-		style="background-color: #303f9f;">
-		<h6>@copyright Design and Developer by Chien Doan Coder</h6>
-
-	</div>
-</footer>
 </html>

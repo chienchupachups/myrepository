@@ -15,8 +15,8 @@
 
 	<div class="container p-3">
 		<div class="row mt -2">
-			<div class="col-md-4 offset-md-4">
-				<div class="card">
+			<div class="col-lg-4 offset-lg-4">
+				<div class="card" style="margin-top: 10px;">
 					<div class="card-body">
 
 						<h4 class="text-center">Registration Page</h4>
@@ -66,7 +66,7 @@
 									for="exampleCheck1">Agree Terms & Condition</label>
 							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="submit" class="btn btn-primary" style="background: #77b748; color: white;">Submit</button>
 								
 							</div>
 
@@ -76,9 +76,6 @@
 			</div>
 		</div>
 	</div>
-
-</body>
-<footer>
 	<%@include file="all_component/footer.jsp"%>
-</footer>
+</body>
 </html>
