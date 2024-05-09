@@ -45,7 +45,7 @@
 					<div class="tg-searchbox">
 						<form class="tg-formtheme tg-formsearch" action="search.jsp" method="post">
 							<fieldset>
-								<input type="text" name="search" class="typeahead form-control" placeholder="Search by title, author, keyword, ISBN...">
+								<input type="text" name="ch" class="typeahead form-control" placeholder="Search...">
 								<button type="submit"><i class="icon-magnifier" type="submit"></i></button>
 							</fieldset>
 						</form>

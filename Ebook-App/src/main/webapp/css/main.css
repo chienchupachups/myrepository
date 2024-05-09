@@ -11,7 +11,7 @@ html{
 }
 body {
 	color: #666;
-	background: #fff;
+	background: #EDF2F4;
 	font:400 14px/23px 'Open Sans', Arial, Helvetica, sans-serif;
 }
 body h1,
@@ -105,7 +105,6 @@ input[type="color"],
 	display: inline-block;
 	vertical-align: middle;
 	border: 1px solid #dbdbdb;
-	text-transform: capitalize;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -655,7 +654,7 @@ li.tg-rss a { background:#ff6600; }
 	color: #fff;
 	padding: 0 10px;
 	text-align: center;
-	background: #f16945;
+	background: #D90429;
 	display: inline-block;
 	vertical-align: middle;
 	text-transform: capitalize;
@@ -901,7 +900,7 @@ body.tg-comingsoonpage .tg-wrapper{overflow:visible;}
 	border-radius: 50%;
 	position: absolute;
 	text-align: center;
-	background: #f16945;
+	background: #D90429;
 	vertical-align: top;
 	display: inline-block;
 	color: #fff !important;
@@ -2070,9 +2069,9 @@ li.menu-item-has-mega-menu { position: static; }
 .tg-pickedbyauthor .tg-postbook{
 	margin: 15px 0;
 	position: relative;
-	background: #f7f7f7;
+	background: #EDF2F4;
 	padding: 0 30px 30px;
-	border-bottom: 3px solid #f7f7f7;
+	border-bottom: 3px solid #EDF2F4;
 }
 .tg-pickedbyauthor .tg-featureimg{
 	padding: 30px 50px;
@@ -2096,7 +2095,7 @@ li.menu-item-has-mega-menu { position: static; }
 	float: none;
 }
 .tg-pickedbyauthor .tg-postbook:hover{
-	background: #fff;
+	background: #EDF2F4;
 	-webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.20);
 	box-shadow: 0 0 10px 2px rgba(0,0,0,0.20);
 }
@@ -2828,7 +2827,7 @@ li.menu-item-has-mega-menu { position: static; }
 	float: left;
 	padding: 20px 0;
 	position: relative;
-	background: #484848;
+	background: #2B2D42;
 }
 .tg-copyright{
 	color: #fff;
@@ -3418,7 +3417,7 @@ blockquote .tg-bookwriter{
 	line-height:30px;
 	border-radius:50%;
 	position:absolute;
-	background:#f16945;
+	background:#D90429;
 }
 .tg-featurebook .tg-featureditm figure{margin:0;}
 .tg-featurebook .tg-featureditmcontent{
@@ -3595,7 +3594,7 @@ blockquote .tg-bookwriter{
 .tg-quantityholder .minus:hover,
 .tg-quantityholder .plus:hover{
 	color:#fff;
-	box-shadow: inset 0 -2px 0 0 #649b3c;
+	box-shadow: inset 0 -2px 0 0 #D90429;
 }
 .tg-productdetail .tg-postbook .tg-postbookcontent .tg-btn{
 	padding:0;

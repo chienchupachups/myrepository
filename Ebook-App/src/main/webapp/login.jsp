@@ -42,7 +42,7 @@
 							</div>
 
 							<div class="text-center">
-								<button type="submit" class="btn" style="background: #77b748; color: white;">Login</button>
+								<button type="submit" class="btn" style="background: #D90429; color: white;">Login</button>
 								<div class="text-center">
 									<a href="register.jsp">Create Account</a>
 								</div>

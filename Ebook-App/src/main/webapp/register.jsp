@@ -62,11 +62,11 @@
 							</div>
 							<div class="form-group form-check">
 								<input type="checkbox" class="form-check-input" name="check"
-									id="exampleCheck1"> <label class="form-check-label"
+									id="exampleCheck1"> <label class="form-check-label" style="margin-left: 30px; margin-top: -2px;"
 									for="exampleCheck1">Agree Terms & Condition</label>
 							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-primary" style="background: #77b748; color: white;">Submit</button>
+								<button type="submit" class="btn btn-primary" style="background: #D90429; color: white;">Submit</button>
 								
 							</div>
 
