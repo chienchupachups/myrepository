@@ -23,14 +23,14 @@
 
 
 	<c:if test="${not empty succMsg }">
-		<div class="alert alert-success" role="alert">${succMsg }</div>
+		<div class="text-center alert alert-success" role="alert">${succMsg }</div>
 			
 			<c:remove var="succMsg" scope="session"></c:remove>
 	</c:if>
 	
 	
 	<c:if test="${not empty failed }">
-		<div class="alert alert-danger text-center" role="alert">${failed }</div>
+		<div class="text-center alert alert-danger text-center" role="alert">${failed }</div>
 			
 			<c:remove var="failed" scope="session"></c:remove>
 	</c:if>

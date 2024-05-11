@@ -26,7 +26,7 @@
 		<div class="row p-5">
 			<div class="col-md-6 text-center p-5 border bg-white">
 				<img src="book/<%=b.getPhotoName()%>"
-					style="height: 25vh; width: 30%"><br>
+					style="height: 20vh; width: 30%"><br>
 				<h4>
 					Book Name:<span class="text-danger"><%=b.getBookname()%></span>
 				</h4>

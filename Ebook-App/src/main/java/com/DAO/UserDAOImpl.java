@@ -124,4 +124,25 @@ boolean f=false;
 		
 		return f;
 	}
+	
+	@Override
+	public boolean checkUser(String em) {
+		boolean f=true;
+		
+		try {
+			String sql = "select * from user where email=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setString(1, em);
+			
+			ResultSet rs=pst.executeQuery();
+			
+			while(rs.next())
+			{
+				f=false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return f;
+	}
 }

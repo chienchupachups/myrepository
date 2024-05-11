@@ -85,7 +85,7 @@ a:hover {
 								<i class="fa-solid fa-location-dot fa-3x"></i>
 							</div>
 							<h4>Address</h4>
-							<p>Edit address</p>
+							<p>Add address</p>
 						</div>
 					</div>
 				</a>

@@ -11,12 +11,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ebook: HomePage</title>
+<title>E-book: HomePage</title>
 <%@include file="all_component/allCss.jsp"%>
 <style type="text/css">
 .back-img {
 	background: url("img/book.jpg");
-	height: 50vh;
+	height: 40vh;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -38,14 +38,17 @@
 
 
 	<div class="container-fluid back-img">
-		<h2 class="text-center">Ebook Management System</h2>
+		<h2 class="text-center p-4">
+			<i class="fa-solid fa-book"></i> E-book Management System
+		</h2>
 	</div>
 
+	<hr>
 
 	<!-- Start Recent Book -->
 
 	<div class="container">
-		<h3 class="text-center">Recent Book</h3>
+		<h2 class="text-center text-danger">Recent Book</h2>
 		<div class="row">
 			<%
 			BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
@@ -123,7 +126,7 @@
 	<!-- Start New Book -->
 
 	<div class="container">
-		<h3 class="text-center">New Book</h3>
+		<h2 class="text-center text-success">New Book</h2>
 		<div class="row">
 
 			<%
@@ -179,6 +182,7 @@
 
 	<!-- Start Old Book -->
 	<div class="container">
+		<h2 class="text-center">Old Book</h2>
 		<div class="row">
 			<%
 			BookDAOImpl dao2 = new BookDAOImpl(DBConnect.getConn());

@@ -288,7 +288,7 @@ public class BookDAOImpl implements BookDAO {
 		List<Book_Dtls> list = new ArrayList<Book_Dtls>();
 		Book_Dtls b = null;
 		try {
-			String sql = "select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			String sql = "select * from book_dtls where bookCategory=? and status=? order by bookId ASC";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, "New");
 			ps.setString(2, "Active");

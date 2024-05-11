@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>All Recent Book</title>
+<title>Search Books</title>
 <%@include file="all_component/allCss.jsp"%>
 <style type="text/css">
 .back-img {
