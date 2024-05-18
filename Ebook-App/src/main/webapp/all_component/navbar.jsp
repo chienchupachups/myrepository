@@ -12,17 +12,18 @@
 					<i class="fa-solid fa-book"></i> E-book
 				</h3>
 			</div>
-			<div class="col-md-6">
-				<form class="form-inline my-2 my-lg-0" action="search.jsp" method="post">
+			<div class="col-md-5">
+				<form class="form-inline" action="search.jsp" method="post">
 					<input class="form-control mr-sm-2" type="search" name="ch"
-						placeholder="Search here..." aria-label="Search">
-					<button class="btn btn-primary my-2 my-sm-0" type="submit">Search </button>
+						placeholder="Search" aria-label="Search"
+						style="width: calc(100% - 90px); display: inline-block; max-width: 500px;">
+					<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>
 
 			<c:if test="${not empty userobj }">
 			
-			<div class="col-md-3">
+			<div class="col-md-4">
 			
 			<a href="checkout.jsp" class="m-3"> <i class="fa-solid fa-cart-plus fa-2x"></i></a>
 			
@@ -36,7 +37,7 @@
 
 			<c:if test="${empty userobj }">
 			
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<a href="login.jsp" class="btn btn-success"><i
 					class="fa-solid fa-right-to-bracket"></i> Login</a> <a
 					href="register.jsp" class="btn btn-primary text-white"><i

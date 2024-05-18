@@ -55,7 +55,7 @@
 			List<Book_Dtls> list = dao.getRecentBook();
 			for (Book_Dtls b : list) {
 			%>
-			<div class="col-md-3">
+			<div class="col-md-4 col-lg-3">
 				<div class="card crd-ho mt-2">
 					<div class="card-body text-center">
 						<img alt="" src="book/<%=b.getPhotoName()%>"
@@ -68,37 +68,37 @@
 							%>
 
 							Category:<%=b.getBookCategory()%></p>
-						<div class="row">
+						<div class="row" style="justify-content: center; gap: 5px">
 
 							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-								class="btn btn-success btn-sm ml-5">View Details</a> <a href=""
-								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+								class="btn btn-success btn-sm">View Details</a> <a href=""
+								class="btn btn-danger btn-sm"><%=b.getPrice()%></a>
 						</div>
 						<%
 						} else {
 						%>
 						Category:<%=b.getBookCategory()%></p>
-						<div class="row">
+						<div class="row" style="justify-content: center; gap: 5px">
 
 
 							<%
 							if (user == null) {
 							%>
-							<a href="login.jsp" class="btn btn-danger btn-sm ml-2">Add
+							<a href="login.jsp" class="btn btn-danger btn-sm">Add
 								Cart</a>
 
 							<%
 							} else {
 							%>
 							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=user.getId()%>"
-								class="btn btn-danger btn-sm ml-2">Add Cart</a>
+								class="btn btn-danger btn-sm">Add Cart</a>
 
 							<%
 							}
 							%>
 							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
-								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+								class="btn btn-success btn-sm">View Details</a> <a href=""
+								class="btn btn-danger btn-sm"><%=b.getPrice()%></a>
 						</div>
 						<%
 						}
@@ -134,7 +134,7 @@
 			List<Book_Dtls> list1 = dao1.getNewBook();
 			for (Book_Dtls b : list1) {
 			%>
-			<div class="col-md-3">
+			<div class="col-md-4 col-lg-3">
 				<div class="card crd-ho mt-2">
 					<div class="card-body text-center">
 						<img alt="" src="book/<%=b.getPhotoName()%>"
@@ -143,24 +143,24 @@
 						<p><%=b.getAuthor()%></p>
 						<p>
 							Category:<%=b.getBookCategory()%></p>
-						<div class="row">
+						<div class="row" style="justify-content: center; gap: 5px">
 
 							<%
 							if (user == null) {
 							%>
-							<a href="login.jsp" class="btn btn-danger btn-sm ml-2">Add
+							<a href="login.jsp" class="btn btn-danger btn-sm">Add
 								Cart</a>
 							<%
 							} else {
 							%>
 							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=user.getId()%>"
-								class="btn btn-danger btn-sm ml-2">Add Cart</a>
+								class="btn btn-danger btn-sm">Add Cart</a>
 							<%
 							}
 							%>
 							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
-								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+								class="btn btn-success btn-sm">View Details</a> <a href=""
+								class="btn btn-danger btn-sm"><%=b.getPrice()%></a>
 						</div>
 					</div>
 				</div>
@@ -189,7 +189,7 @@
 			List<Book_Dtls> list2 = dao2.getOldBook();
 			for (Book_Dtls b : list2) {
 			%>
-			<div class="col-md-3">
+			<div class="col-md-4 col-lg-3">
 				<div class="card crd-ho mt-2">
 					<div class="card-body text-center">
 						<img alt="" src="book/<%=b.getPhotoName()%>"
@@ -202,18 +202,18 @@
 							%>
 
 							Category:<%=b.getBookCategory()%></p>
-						<div class="row">
+						<div class="row" style="justify-content: center; gap: 5px">
 							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-								class="btn btn-success btn-sm ml-5">View Details</a> <a href=""
-								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+								class="btn btn-success btn-sm">View Details</a> <a href=""
+								class="btn btn-danger btn-sm"><%=b.getPrice()%></a>
 						</div>
 						<%
 						} else {
 						%>
 						Category:<%=b.getBookCategory()%></p>
-						<div class="row">
+						<div class="row" style="justify-content: center; gap: 5px">
 
-							<a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a> <a
+							<a href="" class="btn btn-danger btn-sm">Add Cart</a> <a
 								href="view_books.jsp?bid=<%=b.getBookId()%>"
 								class="btn btn-success btn-sm">View Details</a> <a href=""
 								class="btn btn-danger btn-sm"><%=b.getPrice()%></a>
