@@ -28,6 +28,7 @@
 			<a href="checkout.jsp" class="m-3"> <i class="fa-solid fa-cart-plus fa-2x"></i></a>
 			
 				<a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> ${userobj.name }</a>
+				<a data-toggle="modal" data-target="#exampleModal">
 					 <a href="logout" 
 					 class="btn btn-primary text-white"><i
 					class="fa-solid fa-right-to-bracket"></i> Logout</a>
@@ -78,9 +79,13 @@
 				<a href="setting.jsp" class="btn btn-light my-2 my-sm-0" type="submit">
 					<i class="fa-solid fa-gear"></i> Setting
 				</a>
-				<button class="btn btn-light my-2 my-sm-0 ml-1" type="submit">
+				<a href="contact.jsp" class="btn btn-light my-2 my-sm-0 ml-1" type="submit">
 					<i class="fa-solid fa-address-card"></i> Contact Us
-				</button>
+				</a>
 			</form>
 		</div>
+		
+
+	
+	
 	</nav>

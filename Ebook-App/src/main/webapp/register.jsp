@@ -19,7 +19,7 @@
 				<div class="card">
 					<div class="card-body">
 
-						<h4 class="text-center">Registration Page</h4>
+						<h4 class="text-center">Registration</h4>
 
 						<c:if test="${not empty succMsg }">
 							<p class="text-center text-success">${succMsg }</p>

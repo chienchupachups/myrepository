@@ -107,7 +107,7 @@ a:hover {
 			</div>
 
 			<div class="col-md-4 mt-3">
-				<a href="#">
+				<a href="contact.jsp">
 					<div class="card">
 						<div class="card-body text-center">
 							<div class="text-success">

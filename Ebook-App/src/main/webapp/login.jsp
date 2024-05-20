@@ -17,7 +17,7 @@
 			<div class="col-md-4 offset-md-4">
 				<div class="card">
 					<div class="card-body">
-						<h3 class="text-center">Login Page</h3>
+						<h3 class="text-center">Login</h3>
 						
 						<c:if test="${not empty failedMsg }">
 						<h5 class="text-center text-danger">${failedMsg }</h5>
